@@ -1,0 +1,12 @@
+.graph-container {
+  width: 100%;
+}
+
+.graph-container .bar {
+  margin: 1%;
+  display: inline-block;
+  position: relative;
+  background-color: #aeaeae;
+  height: 1px;
+  /* show a small line to indicate zero */
+}
