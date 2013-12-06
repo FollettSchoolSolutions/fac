@@ -6,6 +6,10 @@ that can be pulled into your projects and modified or used as is.
 ###Versions
 Initial version: 1.0
 
+[Documentation](http://follettschoolsolutions.github.io/fac/)
+
+[Binaries](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages)
+
 ####Pre-requisites to building the project
 * Ant 1.8.2 is used, prior versions may work
 * This is built and tested for use with Angular 1.0.7, which is pulled from Google's CDN
