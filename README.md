@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/FollettSchoolSolutions/fac.png?branch=master)](https://travis-ci.org/FollettSchoolSolutions/fac)
 #Angular component library
 This library is licensed under the MIT license.
 
