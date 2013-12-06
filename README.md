@@ -31,7 +31,7 @@ To contribute:
 
   type 'ant test' (this requires PhantomJS to be installed)
 
-* Checkout the docs project
+* Checkout the [docs](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages) project by switching to the gh-pages branch
 * Follow the instructions for that project on how to add a simple usage example to the existing page
 
 A build will produce the following output files in the 'output' folder:
