@@ -1,0 +1,17 @@
+<div data-ng-controller="truncateController">
+  <div class="row vertical-spacer-medium">
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <h6>No truncate: </h6>
+      {{text}}
+      <br>
+      <h6>Truncate with 20: </h6>
+      {{text|fssTruncate:20}}
+      
+      <br>
+      <h6>Truncate with 20 and "[The end]" marking the truncate spot: </h6>
+      {{text|fssTruncate:20:"[The end]"}}
+    </div>
+  </div>
+</div>

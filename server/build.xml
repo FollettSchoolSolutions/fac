@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="example" default="startServer">
+    <!-- Load Build Props file-->
+
+    <property name="test.port" value="9000" />
+    <property name="stop.port" value="8079" />
+    <property name="stop.key" value="secret" />
+
+    <target name="startServer">
+        <java jar="jetty/start.jar" dir="jetty"
+            fork="true"
+            spawn="true"
+            maxmemory="128m"
+        >
+            <jvmarg value="-DSTOP.PORT=${stop.port}" />
+            <jvmarg value="-DSTOP.KEY=${stop.key}" />
+
+            <jvmarg value="-Djetty.port=${test.port}" />
+        </java>
+        <waitfor maxwait="5" maxwaitunit="second">
+            <http url="http://localhost:${test.port}/server/ready.txt" />
+        </waitfor>
+    </target>
+    <target name="stopServer" >
+        <java jar="jetty/start.jar" dir="jetty"
+            fork="true"
+            failonerror="true"
+            maxmemory="128m"
+        >
+            <jvmarg value="-DSTOP.PORT=${stop.port}" />
+            <jvmarg value="-DSTOP.KEY=${stop.key}" />
+            <arg value="--stop" />
+        </java>
+    </target>
+
+
+</project>

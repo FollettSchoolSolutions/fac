@@ -1,0 +1,20 @@
+<div data-ng-controller="hideKbController">
+  <div class="row vertical-spacer-medium">
+  </div>
+  <div class="row">
+    <div class="six columns">
+      <h4>Form with hide keyboard directive</h4>
+      <form name="withDirective" data-ng-submit="viewHelper.submit(first)" data-fss-hide-keyboard-on-submit>
+        <span>Enter your text here</span><input type="text" data-ng-model="first.input">
+      </form>
+      <span>{{first.message}}</span>
+    </div>
+    <div class="six columns">
+      <h4>Form without hide keyboard directive</h4>
+      <form name="withoutDirective" data-ng-submit="viewHelper.submit(second)">
+        <span>Enter your text here</span><input type="text" data-ng-model="second.input">
+      </form>
+      <span>{{second.message}}</span>
+    </div>
+  </div>
+</div>

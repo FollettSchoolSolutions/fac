@@ -1,0 +1,18 @@
+<div data-ng-controller="SanitizeController">
+  <div class="row vertical-spacer-medium">
+    <div class="six columns">
+      <h4>With fss-bind-html</h4>
+      <span data-fss-bind-html="viewHelper.userInput"></span>
+    </div>
+    <div class="six columns">
+      <h4>With default ng-bind</h4>
+      <span data-ng-bind="viewHelper.userInput"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <h5>Change me!</h5>
+      <textarea rows="4" cols="40" data-ng-model="viewHelper.userInput"></textarea>
+    </div>
+  </div>
+</div>
