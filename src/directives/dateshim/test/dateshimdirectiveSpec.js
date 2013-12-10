@@ -21,7 +21,7 @@
         });
         it("Test that a valid date in the text only field will populate the model with iso8601 date", function () {
             var html, scope = rootScope, input;
-            html = angular.element('<form name="myForm"><div data-fss-date-shim data-ng-model="dueDate" data-iso-date></div></form>');
+            html = angular.element('<form name="myForm"><div data-fss-date-shim name="dateShim" data-ng-model="dueDate" data-iso-date></div></form>');
             scope.dueDate = "";
             compile(html)(scope);
             scope.$digest();
@@ -122,8 +122,8 @@
             scope.$digest();
             nativePicker = html.find('input[name="dateShimNativePicker"]');
             textPicker = html.find('input[name="dateShimTextOnly"]');
-            expect(nativePicker.parent().css('display')).toBe("none");
-            expect(textPicker.parent().css('display')).toBe("");
+            expect(nativePicker.parent().hasClass('ng-hide')).toBeTruthy();
+            expect(textPicker.parent().hasClass('ng-hide')).toBeFalsy();
         });
         it("Test that date native picker is shown when supported", function () {
             var html, scope = rootScope, nativePicker, textPicker;
@@ -133,8 +133,8 @@
             scope.$digest();
             nativePicker = html.find('input[name="dateShimNativePicker"]');
             textPicker = html.find('input[name="dateShimTextOnly"]');
-            expect(nativePicker.parent().css('display')).toBe("");
-            expect(textPicker.parent().css('display')).toBe("none");
+            expect(nativePicker.parent().hasClass('ng-hide')).toBeFalsy();
+            expect(textPicker.parent().hasClass('ng-hide')).toBeTruthy();
         });
         it("native picker - verify that when the model contains an initial value it is set in the text field", function () {
             var html, scope = rootScope, nativePicker, textPicker;
@@ -163,7 +163,7 @@
         it("validator for current date or later", function () {
             var html, scope = rootScope, nativePicker;
             scope.dueDate = "2004-08-14";
-            html = angular.element('<form name="myForm"><div data-fss-date-shim data-ng-model="dueDate" data-iso-date data-future></div></form>');
+            html = angular.element('<form name="myForm"><div data-fss-date-shim name="picker" data-ng-model="dueDate" data-iso-date data-future></div></form>');
             compile(html)(scope);
             scope.$digest();
             nativePicker = html.find('input[name="dateShimNativePicker"]');
@@ -171,18 +171,18 @@
             expect(nativePicker.val()).toBe("2004-08-14");
             expect(scope.myForm.$invalid).toBe(true);
             expect(scope.myForm.$valid).toBe(false);
-            expect(scope.myForm.dateShim.$error).toEqual({currentDate: true, validDate: false});
+            expect(scope.myForm.picker.$error).toEqual({currentDate: true, validDate: false});
 
             //set to a future date
             scope.dueDate = "2400-08-14";
-            html = angular.element('<form name="myForm"><div data-fss-date-shim data-ng-model="dueDate" data-iso-date data-future></div></form>');
+            html = angular.element('<form name="myForm"><div data-fss-date-shim name="picker" data-ng-model="dueDate" data-iso-date data-future></div></form>');
             compile(html)(scope);
             scope.$digest();
             nativePicker = html.find('input[name="dateShimNativePicker"]');
 
             expect(nativePicker.val()).toBe("2400-08-14");
             expect(scope.myForm.$valid).toBe(true);
-            expect(scope.myForm.dateShim.$error).toEqual({currentDate: false, validDate: false});
+            expect(scope.myForm.picker.$error).toEqual({currentDate: false, validDate: false});
 
             //set to today's date
             scope.dueDate =  dts.formatDateISO8601(new Date());

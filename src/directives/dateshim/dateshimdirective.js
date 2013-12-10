@@ -48,9 +48,6 @@
                     scope.unclean = {text: null};
                     scope.clean = {text: null};
 
-                    //find out if we've assigned a name to our control, or default it to "dateShim"
-                    ngModelCtrl.$name = attrs.name || "dateShim";
-
                     //Check to see if the model is set initially.  If so, convert it to the displayable date
                     //and set the input fields with the initial values in the formats they expect them
                     modelValue = scope.model;

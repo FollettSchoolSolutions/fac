@@ -44,7 +44,7 @@
             $scope.items = testData.items;
             directive = $compile('<div data-fss-bar-graph data-items="items" ></div>')($scope);
             $scope.$apply();
-            directiveScope = directive.scope();
+            directiveScope = directive.children().scope();
 
             // tallest bar (should be 35% of 150px, rounded up)
             apple = testData.items[2];
@@ -59,7 +59,7 @@
             $scope.items = testData.items;
             directive = $compile('<div data-fss-bar-graph data-items="items"></div>')($scope);
             $scope.$apply();
-            directiveScope = directive.scope();
+            directiveScope = directive.children().scope();
 
             // shortest bar (no counts, so should be 1px)
             // note: we don't want 0px because we want to show *something* to indicate it's a choice
@@ -74,7 +74,7 @@
             $scope.items = testData.items;
             directive = $compile('<div data-fss-bar-graph data-items="items"></div>')($scope);
             $scope.$apply();
-            directiveScope = directive.scope();
+            directiveScope = directive.children().scope();
 
             for (idx = testData.items.length - 1; idx >= 0; idx--) {
                 total += testData.items[idx].count;
@@ -87,20 +87,21 @@
         });
 
         it('hide the bar graph if there are not any data points', function () {
-            var directive;
+            var directive, html;
+            html = '<div data-fss-bar-graph data-items="items"></div>';
 
             $scope.items = [{ text: 'Something', count: 0 },
                               { text: 'Whatever', count: 0}];
-            directive = $compile('<div data-fss-bar-graph data-items="items"></div>')($scope);
+            directive = $compile(html)($scope);
             $scope.$apply();
 
-            expect(directive.css('display')).toBe('none', 'graph should be hidden there are no items');
+            expect(directive.hasClass('ng-hide')).toBeTruthy('graph should be hidden there are no items');
 
             $scope.items = [{ text: 'Something', count: 1 },
                               { text: 'Whatever', count: 1}];
             $scope.$apply();
 
-            expect(directive.css('display')).not.toBe('none', 'but should be cool if there *are* data points');
+            expect(directive.hasClass('ng-hide')).toBeFalsy('but should be cool if there *are* data points');
         });
 
     });
