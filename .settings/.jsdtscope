@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="lib/angular/i18n"/>
-	<classpathentry kind="src" path="lib/build"/>
-	<classpathentry kind="src" path="lib/jquery"/>
-	<classpathentry kind="src" path="lib/jslint/docs"/>
-	<classpathentry excluding="test/" kind="src" path="src/directives/bargraph"/>
-	<classpathentry kind="src" path="src/directives/bargraph/test"/>
-	<classpathentry excluding="test/" kind="src" path="src/directives/dateshim"/>
-	<classpathentry kind="src" path="src/directives/dateshim/test"/>
-	<classpathentry excluding="test/" kind="src" path="src/directives/hidekeyboardonsubmit"/>
-	<classpathentry kind="src" path="src/directives/hidekeyboardonsubmit/test"/>
-	<classpathentry excluding="test/" kind="src" path="src/directives/sanitize"/>
-	<classpathentry kind="src" path="src/directives/sanitize/test"/>
-	<classpathentry excluding="test/" kind="src" path="src/filters/truncate"/>
-	<classpathentry kind="src" path="src/filters/truncate/test"/>
-	<classpathentry excluding="test/" kind="src" path="src/services/datetime"/>
-	<classpathentry kind="src" path="src/services/datetime/test"/>
-	<classpathentry kind="src" path="temp/partials/directives/dateshim"/>
-	<classpathentry excluding="lib/jasmine/|lib/qunit/|lib/sinon/|webapp/example/|webapp/example/bargraphEx/|webapp/example/dateshimEx/|webapp/example/hidekeyboardonsubmitEx/|webapp/example/javascripts/foundation/|webapp/example/sanitizeEx/|webapp/example/stylesheets/|webapp/example/truncateEx/" kind="src" path="test"/>
-	<classpathentry kind="src" path="test/lib/sinon"/>
-	<classpathentry excluding="truncateEx/|hidekeyboardonsubmitEx/|dateshimEx/|stylesheets/|bargraphEx/|javascripts/foundation/|sanitizeEx/" kind="src" path="test/webapp/example"/>
-	<classpathentry kind="src" path="test/webapp/example/bargraphEx"/>
-	<classpathentry kind="src" path="test/webapp/example/dateshimEx"/>
-	<classpathentry kind="src" path="test/webapp/example/hidekeyboardonsubmitEx"/>
-	<classpathentry kind="src" path="test/webapp/example/sanitizeEx"/>
-	<classpathentry kind="src" path="test/webapp/example/stylesheets"/>
-	<classpathentry kind="src" path="test/webapp/example/truncateEx"/>
+	<classpathentry kind="src" path="src/directives/bargraph"/>
+	<classpathentry kind="src" path="src/directives/dateshim"/>
+	<classpathentry kind="src" path="src/directives/hidekeyboardonsubmit"/>
+	<classpathentry kind="src" path="src/directives/sanitize"/>
+	<classpathentry kind="src" path="src/filters/truncate"/>
+	<classpathentry kind="src" path="src/services/datetime"/>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
