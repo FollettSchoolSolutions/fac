@@ -5,7 +5,13 @@ This library is licensed under the MIT license.
 This project houses components helpful to general application development with AngularJS.  The goal is to provide a collection of common services/directive/filters, etc
 that can be pulled into your projects and modified or used as is.
 ###Versions
-Initial version: 1.0
+1.0
+ 
+* Compatible with AngularJS 1.0.7
+
+1.1
+
+* Compatible with AngularJS 1.2.4
 
 [Documentation](http://follettschoolsolutions.github.io/fac/)
 
@@ -13,7 +19,6 @@ Initial version: 1.0
 
 ####Pre-requisites to building the project
 * Ant 1.8.2 is used, prior versions may work
-* This is built and tested for use with Angular 1.0.7, which is pulled from Google's CDN
 * PhatomJS version 1.4.0 is used for running tests from the command line, although you don't have to have it installed in order to build the project
 To contribute:
 
