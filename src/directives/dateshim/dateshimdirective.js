@@ -7,19 +7,19 @@
 (function () {
     'use strict';
 /**
- * 
+ *
  * Date shim creates a date entry field that will utilize the browser's native date picker.
  * If the browser does not support the datepicker, then it becomes a text entry field that requires
  * mm/dd/yyyy.  In either case, ng-model associated with the directive will store the date in the ISO8601
  * format (yyyy-mm-dd).  For the case of browsers which do not support the native date picker, the model will
  * remain null until a valid date has been entered.
  */
-    angular.module('directives.dateshim', ['fss.services.datetime', 'partials'])
+    angular.module('directives.dateshim', ['fss.services.datetime'])
         .directive('fssDateShim', ['DateTimeService', function (dts) {
             return {
                 restrict: 'A',
                 replace: false,
-                //create an iso scope, and setup bi-di binding between scope.model and the ng-model of the parent scope 
+                //create an iso scope, and setup bi-di binding between scope.model and the ng-model of the parent scope
                 scope: {model: "=ngModel"},
                 templateUrl: 'directives/dateshim/dateshim.html',
                 require: 'ngModel',
