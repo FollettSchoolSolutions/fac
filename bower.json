@@ -1,0 +1,9 @@
+{
+  "name": "follett-angular-components",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "1.2.18",
+    "angular-mocks": "1.2.18"
+  }
+}
