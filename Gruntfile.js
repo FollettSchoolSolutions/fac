@@ -33,4 +33,9 @@ module.exports = function (grunt) {
   grunt.registerTask('debug', [
     'karma:dev'
   ]);
+
+  grunt.registerTask('default', [
+    'jshint',
+    'karma:unit'
+  ]);
 };

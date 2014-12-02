@@ -63,7 +63,7 @@
                      * Changes are tested to see if it is a valid date.  If so, then we format it in ISO8601
                      * and set the model with the ISO8601 date string
                      */
-                    scope.$watch('unclean.text', function (newVal, oldVal) {
+                    scope.$watch('unclean.text', function (newVal) {
                         var d;
                         if (dts.isValidDate(newVal)) {
                             d = new Date(newVal);
@@ -87,7 +87,7 @@
                      * the ISO8601 format.
                      *
                      */
-                    scope.$watch('clean.text', function (newVal, oldVal) {
+                    scope.$watch('clean.text', function (newVal) {
                         ngModelCtrl.$setViewValue(newVal);
                     });
                 }
