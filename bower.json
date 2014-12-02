@@ -1,9 +1,13 @@
 {
   "name": "follett-angular-components",
   "version": "0.0.0",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "angular": "1.2.18",
+    "moment": "2.5.1",
+    "angular-momentjs": "~0.1.8",
+    "modernizr": "~2.8.3"
+  },
+  "devDependencies": {
     "angular-mocks": "1.2.18",
     "jquery": "~2.1.1"
   }
