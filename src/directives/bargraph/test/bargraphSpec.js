@@ -24,10 +24,10 @@
                 { text: 'Grapes',   count: 15 },
                 { text: 'Mangos',   count: 0  }
             ];
-            testData.dataPoints = 100; //(sum of all items counts (25 + 20 + 40 +  15)            
+            testData.dataPoints = 100; //(sum of all items counts (25 + 20 + 40 +  15)
         });
         it('classes are set right', function () {
-            var directive, classHelper;
+            var directive;
 
             $scope.items = testData.items;
             directive = $compile('<div data-fss-bar-graph data-items="items"></div>')($scope);

@@ -4,8 +4,10 @@
 *Licensed under the MIT license http://opensource.org/licenses/MIT
 */
 
+/* jshint ignore:start */
+
 (function () {
-	//'use strict';
+	// 'use strict';
 
 	/**
 	 * @ngdoc overview
@@ -49,6 +51,11 @@
 	    URI_REGEXP = /^((ftp|https?):\/\/|mailto:|#)/,
 	    NON_ALPHANUMERIC_REGEXP = /([^\#-~| |!])/g; // Match everything outside of normal chars and " (quote character)
 
+	function makeMap(str) {
+	  var obj = {}, items = str.split(','), i;
+	  for (i = 0; i < items.length; i++) {obj[items[i]] = true;}
+	  return obj;
+	}
 
 	// Good source of info about elements and attributes
 	// http://dev.w3.org/html5/spec/Overview.html#semantics
@@ -84,12 +91,6 @@
 	    'ismap,lang,language,nohref,nowrap,rel,rev,rows,rowspan,rules,'+
 	    'scope,scrolling,shape,span,start,summary,target,title,type,'+
 	    'valign,value,vspace,width'));
-
-	function makeMap(str) {
-	  var obj = {}, items = str.split(','), i;
-	  for (i = 0; i < items.length; i++) {obj[items[i]] = true;}
-	  return obj;
-	}
 
 
 	/**
@@ -314,12 +315,12 @@
 
 	//define fssSanitize module and register $fssSanitize service
 	angular.module('fssSanitize', []).value('fssSanitize', fsssanitize);
-	
+
 	/** fssBindHtml directive
 	 * Usage:
 	 * <div data-fss-bind-html="object.unsafeTextInHere"></div>
 	 * This will cause all html to be removed from the unsafeTextInHere and stuck within the div
-	 * 
+	 *
 	 */
 	angular.module('fssSanitize').directive('fssBindHtml', ['fssSanitize', function(fssSanitize) {
 	  return function(scope, element, attr) {
@@ -343,3 +344,5 @@
 	  };
 	}]);
 }());
+
+/* jshint ignore:end */

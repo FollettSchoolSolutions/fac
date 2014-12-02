@@ -10,7 +10,7 @@
         var fakeWin, rootScope, compile;
         beforeEach(function () {
             var providerOverride;
-            fakeWin = {document: {activeElement: {blur: sinon.stub()},
+            fakeWin = {document: {activeElement: {blur: jasmine.createSpy('blur')},
                 createElement: function () {return null; }},
                 navigator: {userAgent: {}}
                 };
@@ -30,9 +30,9 @@
             compile(html)(scope);
             rootScope.$digest();
             input = html.find('input');
-            expect(fakeWin.document.activeElement.blur.called).toBeFalsy("Blur should not have been called");
+            expect(fakeWin.document.activeElement.blur).not.toHaveBeenCalled();
             input.submit();
-            expect(fakeWin.document.activeElement.blur.called).toBeTruthy("Blur should have been called");
+            expect(fakeWin.document.activeElement.blur).toHaveBeenCalled();
         });
     });
 }());
