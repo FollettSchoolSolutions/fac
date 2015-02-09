@@ -2,9 +2,13 @@
 
 module.exports = function(grunt) {
   grunt.config.set('concat', {
-    componenets: {
+    scripts: {
       src: ['src/**/*.js', '!src/**/test/**', '!src/**/*Spec.js'],
       dest: 'dist/follett-angular-components.js'
+    },
+    styles: {
+      src: ['resources/*.css'],
+      dest: 'dist/follett-angular-components.css'
     }
   });
 
