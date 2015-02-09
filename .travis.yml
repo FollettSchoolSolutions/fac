@@ -1,6 +1,0 @@
-language: java
-script:
-    - ant
-    - ant runTests
-notifications:
-    email: true

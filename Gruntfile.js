@@ -14,13 +14,7 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
-
-    // Project settings
-    client: {
-      // configurable paths
-      app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
-    }
+    dist: 'dist'
   });
 
   grunt.loadTasks('build');
@@ -35,6 +29,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'clean:dist',
     'jshint',
     'karma:unit'
   ]);
