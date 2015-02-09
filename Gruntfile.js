@@ -32,6 +32,8 @@ module.exports = function (grunt) {
     'clean:dist',
     'jshint',
     'karma:unit',
-    'concat'
+    'concat',
+    'uglify',
+    'cssmin'
   ]);
 };
