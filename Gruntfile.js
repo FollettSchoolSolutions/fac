@@ -31,6 +31,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'clean:dist',
     'jshint',
-    'karma:unit'
+    'karma:unit',
+    'concat'
   ]);
 };
