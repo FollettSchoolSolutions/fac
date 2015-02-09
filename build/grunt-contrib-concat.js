@@ -3,7 +3,7 @@
 module.exports = function(grunt) {
   grunt.config.set('concat', {
     scripts: {
-      src: ['src/**/*.js', '!src/**/test/**', '!src/**/*Spec.js'],
+      src: ['src/**/*.js', '.tmp/templates.js', '!src/**/test/**', '!src/**/*Spec.js'],
       dest: 'dist/follett-angular-components.js'
     },
     styles: {

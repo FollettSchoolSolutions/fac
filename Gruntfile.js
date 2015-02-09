@@ -12,11 +12,6 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // Define the configuration for all the tasks
-  grunt.initConfig({
-    dist: 'dist'
-  });
-
   grunt.loadTasks('build');
 
   grunt.registerTask('test', [
@@ -29,9 +24,10 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'clean:dist',
+    'clean',
     'jshint',
     'karma:unit',
+    'ngtemplates',
     'concat',
     'uglify',
     'cssmin'
