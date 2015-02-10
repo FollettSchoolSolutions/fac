@@ -7,5 +7,4 @@ before_install:
 install:
   - npm install
   - bower install
-branches:
-  only: gruntify
+before_script: grunt
