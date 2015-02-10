@@ -57,9 +57,9 @@ In your html file:
   * projectname.css  (Unminified css file containing concatenated result of all css files)
   * projectname.min.css  (Minified version of the above file)
 * Commit your changes and submit a pull request to master
-* After the pull request is merged, create a new tag with an incremented version number
-  * `git tag -a 1.3.5 -m 'fac v1.3.5'`
-  * `git push origin 1.3.5`
+* After the pull request is merged, create a new release:
+  * `git tag -a v1.3.5 -m 'fac v1.3.5'`
+  * `git push origin master --tags`
 
 * Checkout the [docs](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages) project by switching to the gh-pages branch
 * Follow the instructions for that project on how to add a simple usage example to the existing page
