@@ -1,7 +1,7 @@
 {
   "name": "follett-angular-components",
   "description": "Components helpful to general application development with AngularJS.",
-  "version": "0.0.0",
+  "version": "0.1.2",
   "main": ["follett-angular-components.js", "follett-angular-components.css"],
   "license": "MIT",
   "ignore": ["build", "resources", "src", "test", ".gitignore", ".jshintrc", ".travis.yml", "Gruntfile.js", "karma.conf.js", "package.json"],
