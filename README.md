@@ -2,9 +2,21 @@
 #Angular component library
 This library is licensed under the MIT license.
 
-This project houses components helpful to general application development with AngularJS.  The goal is to provide a collection of common services/directive/filters, etc
-that can be pulled into your projects and modified or used as is.
-###Versions
+This project houses components helpful to general application development with AngularJS.  The goal is to provide a collection of common services/directive/filters, etc that can be pulled into your projects and modified or used as is.
+
+##Usage
+
+####Installation
+
+From the command line: `bower install follett-angular-components`
+
+In your html file:
+
+    <link rel="stylesheet" href="bower_components/follett-angular-componenets/dist/follett-angular-componenets.css" />
+    ...
+    <script src="bower_components/follett-angular-componenets/dist/follett-angular-componenets.js"></script>
+
+####Versions
 1.0
 
 * Compatible with AngularJS 1.0.7
@@ -17,10 +29,13 @@ that can be pulled into your projects and modified or used as is.
 
 * Compatible with AngularJS 1.2.18
 
-[Documentation](http://follettschoolsolutions.github.io/fac/)
+####Documentation
+[http://follettschoolsolutions.github.io/fac/](http://follettschoolsolutions.github.io/fac/)
 
-[Binaries](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages)
+####Older versions
+[https://github.com/FollettSchoolSolutions/fac/tree/gh-pages](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages)
 
+##Development
 ####Pre-requisites to building the project
 * [NodeJS](http://nodejs.org/)
 * Bower
