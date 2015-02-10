@@ -2,7 +2,6 @@
 #Angular component library
 This library is licensed under the MIT license.
 
-
 This project houses components helpful to general application development with AngularJS.  The goal is to provide a collection of common services/directive/filters, etc
 that can be pulled into your projects and modified or used as is.
 ###Versions
@@ -14,53 +13,41 @@ that can be pulled into your projects and modified or used as is.
 
 * Compatible with AngularJS 1.2.4
 
+1.2
+
+* Compatible with AngularJS 1.2.18
+
 [Documentation](http://follettschoolsolutions.github.io/fac/)
 
 [Binaries](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages)
 
 ####Pre-requisites to building the project
-* Ant 1.8.2 is used, prior versions may work
-* PhatomJS version 1.4.0 is used for running tests from the command line, although you don't have to have it installed in order to build the project
-To contribute:
+* [NodeJS](http://nodejs.org/)
+* Bower
+  * `npm install -g bower`
+* Grunt
+  * `npm install -g grunt-cli`
+
+####Contributing
 
 * Check out the project
 * Add the new component to its' own directory under one of the broad categories (directives/filters etc, adding a new category if applicable)
 * Add the new spec file for your component to a directory named 'test' as a subfolder of the above directory
   * Look at the existing components for an example of this if you are unsure where this goes
-* Build it by typing 'ant' in the project root directory
-* Update the project.version property in the build.properties file
-* Start the test server by typing 'ant startServer'
-* Run the tests in one of the following ways
-
-  Point a browser to "http://localhost:9000/test/runner.html"
-
-  -or-
-
-  type 'ant test' (this requires PhantomJS to be installed)
+* Increment the 'version' in properties.json
+* Test and lint it by typing `grunt` in the project root directory
+* Debug the test suite in a Chrome browser by typing `grunt debug`
+* Build it by typing `grunt build`
 
 * Checkout the [docs](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages) project by switching to the gh-pages branch
 * Follow the instructions for that project on how to add a simple usage example to the existing page
 
-A build will produce the following output files in the 'output' folder:
+A build will produce the following files in the 'dist' folder:
 
 * projectname.js (Unminified javascript file containing concatenated result of all js files, including any directive html files)
-* projectname-min.js (Minified version of the above file)
-* graph.css  (css for use by the bargraph directive)
-
-
-###PhantomJS for command line test runs
-In order to run the tests with the headless browser PhantomJS, you will need to install PhantomJS.  You may either put phantomjs on your PATH, or if not:
-
-* Modify build.properties - change the phantom.js.bin property to reflect the absolute path to the phantomjs binary.
-
-  i.e.
-
-  `phantom.js.bin=/usr/local/bin/phantomjs`
-
-  or for Windows
-
-  `phantom.js.bin=c:\\tools\\phantomjs-1.9.2-windows\\phantomjs`
-
+* projectname.min.js (Minified version of the above file)
+* projectname.css  (Unminified css file containing concatenated result of all css files)
+* projectname.min.css  (Minified version of the above file)
 
 #The MIT License (MIT)
 Copyright (c) 2013 Follett School Solutions, Inc.
