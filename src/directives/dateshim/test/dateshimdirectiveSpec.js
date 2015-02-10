@@ -10,13 +10,11 @@
         var compile, rootScope, dts;
 
         beforeEach(function () {
-            angular.module('partials', []);
-            module('directives.dateshim');
-            inject(function ($compile, $rootScope, $templateCache, DateTimeService, $window) {
+            module('templates', 'directives.dateshim');
+            inject(function ($compile, $rootScope, DateTimeService) {
                 compile = $compile;
                 rootScope = $rootScope;
                 dts = DateTimeService;
-                $templateCache.put('directives/dateshim/dateshim.html', $window.templates.dateshim);
             });
         });
         it("Test that a valid date in the text only field will populate the model with iso8601 date", function () {

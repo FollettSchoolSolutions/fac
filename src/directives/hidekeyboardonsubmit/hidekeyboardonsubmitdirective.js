@@ -9,7 +9,7 @@
 
     angular.module('directives.hidekeyboardonsubmit', [])
         .directive('fssHideKeyboardOnSubmit', ['$window', function ($window) {
-            return function (scope, element, attrs) {
+            return function (scope, element) {
                 element.bind('submit', function () {
                     $window.document.activeElement.blur();
                 });
