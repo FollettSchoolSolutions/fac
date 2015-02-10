@@ -2,11 +2,12 @@
 #Angular component library
 This library is licensed under the MIT license.
 
+
 This project houses components helpful to general application development with AngularJS.  The goal is to provide a collection of common services/directive/filters, etc
 that can be pulled into your projects and modified or used as is.
 ###Versions
 1.0
- 
+
 * Compatible with AngularJS 1.0.7
 
 1.1
@@ -28,7 +29,7 @@ To contribute:
   * Look at the existing components for an example of this if you are unsure where this goes
 * Build it by typing 'ant' in the project root directory
 * Update the project.version property in the build.properties file
-* Start the test server by typing 'ant startServer' 
+* Start the test server by typing 'ant startServer'
 * Run the tests in one of the following ways
 
   Point a browser to "http://localhost:9000/test/runner.html"
@@ -50,7 +51,7 @@ A build will produce the following output files in the 'output' folder:
 ###PhantomJS for command line test runs
 In order to run the tests with the headless browser PhantomJS, you will need to install PhantomJS.  You may either put phantomjs on your PATH, or if not:
 
-* Modify build.properties - change the phantom.js.bin property to reflect the absolute path to the phantomjs binary.  
+* Modify build.properties - change the phantom.js.bin property to reflect the absolute path to the phantomjs binary.
 
   i.e.
 

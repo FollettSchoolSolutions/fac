@@ -12,18 +12,15 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // Define the configuration for all the tasks
-  grunt.initConfig({
-
-    // Project settings
-    client: {
-      // configurable paths
-      app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
-    }
-  });
-
   grunt.loadTasks('build');
+
+  grunt.registerTask('build', [
+    'clean',
+    'ngtemplates',
+    'concat',
+    'uglify',
+    'cssmin'
+  ]);
 
   grunt.registerTask('test', [
     'karma:unit'
