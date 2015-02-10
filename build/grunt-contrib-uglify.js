@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.config.set('uglify', {
     all: {
       files: {
-        'dist/fac-<%= properties.version %>.min.js': ['<%= concat.scripts.dest %>']
+        'dist/follett-angular-components.min.js': ['dist/follett-angular-components.js']
       }
     }
   });

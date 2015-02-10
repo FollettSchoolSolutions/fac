@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.config.set('cssmin', {
     all: {
       files: {
-        'dist/fac-<%= properties.version %>.min.css': ['<%= concat.styles.dest %>']
+        'dist/follett-angular-components.min.css': ['dist/follett-angular-components.css']
       }
     }
   });
