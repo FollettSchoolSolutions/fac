@@ -34,7 +34,6 @@ that can be pulled into your projects and modified or used as is.
 * Add the new component to its' own directory under one of the broad categories (directives/filters etc, adding a new category if applicable)
 * Add the new spec file for your component to a directory named 'test' as a subfolder of the above directory
   * Look at the existing components for an example of this if you are unsure where this goes
-* Increment the 'version' in properties.json
 * Test and lint it by typing `grunt` in the project root directory
 * Debug the test suite in a Chrome browser by typing `grunt debug`
 * Build it by typing `grunt build`
