@@ -1,6 +1,6 @@
 {
   "name": "follett-angular-components",
-  "version": "0.0.0",
+  "version": "1.2.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/FollettSchoolSolutions/fac.git"
@@ -9,6 +9,7 @@
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-angular-templates": "^0.5.7",
+    "grunt-bump": "^0.1.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-cssmin": "^0.12.1",
