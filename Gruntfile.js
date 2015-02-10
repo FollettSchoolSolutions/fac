@@ -14,6 +14,14 @@ module.exports = function (grunt) {
 
   grunt.loadTasks('build');
 
+  grunt.registerTask('build', [
+    'clean',
+    'ngtemplates',
+    'concat',
+    'uglify',
+    'cssmin'
+  ]);
+
   grunt.registerTask('test', [
     'karma:unit'
   ]);
@@ -24,12 +32,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'clean',
     'jshint',
-    'karma:unit',
-    'ngtemplates',
-    'concat',
-    'uglify',
-    'cssmin'
+    'karma:unit'
   ]);
 };
