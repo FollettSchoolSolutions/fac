@@ -2,3 +2,4 @@ js-test-results.xml
 bower_components
 node_modules
 .tmp
+dist
