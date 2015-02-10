@@ -35,4 +35,8 @@ module.exports = function (grunt) {
     'jshint',
     'karma:unit'
   ]);
+
+  grunt.registerTask('release', [
+    'bump'
+  ]);
 };
