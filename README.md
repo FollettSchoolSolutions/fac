@@ -18,7 +18,7 @@ In your html file:
     <script src="bower_components/follett-angular-componenets/dist/follett-angular-componenets.js"></script>
 
 ######Older versions
-[https://github.com/FollettSchoolSolutions/fac/tree/archive](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages)
+[https://github.com/FollettSchoolSolutions/fac/tree/archive](https://github.com/FollettSchoolSolutions/fac/tree/archive)
 
 ####Versions
 1.0
