@@ -36,7 +36,7 @@ In your html file:
 ####Documentation
 [http://follettschoolsolutions.github.io/fac/](http://follettschoolsolutions.github.io/fac/)
 
-##Development
+##Contributing
 ####Pre-requisites to building the project
 * [NodeJS](http://nodejs.org/)
 * Bower
@@ -44,10 +44,13 @@ In your html file:
 * Grunt
   * `npm install -g grunt-cli`
 
-####Contributing
+####Guidelines
 
 * Clone the project and create a new branch off of master
-* Add the new component to its' own directory under one of the broad categories (directives/filters etc, adding a new category if applicable)
+* From the root directory, run `npm install && bower install` to install project dependencies
+* Add your new component to its own directory under one of the broad categories (directives/filters etc, adding a new category if applicable)
+  * All directive names should have the prefix 'fss'
+  * All module names should be in the form '[services|directives|filters|etc].mymodulename'
 * Add the new spec file for your component to a directory named 'test' as a subfolder of the above directory
   * Look at the existing components for an example of this if you are unsure where this goes
 * Test and lint it by typing `grunt` in the project root directory
