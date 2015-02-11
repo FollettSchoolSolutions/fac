@@ -10,6 +10,7 @@ This project houses components helpful to general application development with A
 
 ######Versions 1.2 and later
 From the command line: `bower install follett-angular-components`
+
 In your html file:
 
     <link rel="stylesheet" href="bower_components/follett-angular-componenets/dist/follett-angular-componenets.css" />
@@ -17,7 +18,7 @@ In your html file:
     <script src="bower_components/follett-angular-componenets/dist/follett-angular-componenets.js"></script>
 
 ######Older versions
-[https://github.com/FollettSchoolSolutions/fac/tree/gh-pages](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages)
+[https://github.com/FollettSchoolSolutions/fac/tree/archive](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages)
 
 ####Versions
 1.0
