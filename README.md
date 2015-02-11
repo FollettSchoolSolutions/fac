@@ -9,7 +9,7 @@ This project houses components helpful to general application development with A
 ####Installation
 
 ######Versions 1.2 and later
-From the command line: `bower install follett-angular-components`
+From the command line: `bower install follett-angular-components --save`
 
 In your html file:
 
