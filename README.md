@@ -56,9 +56,12 @@ In your html file:
   * projectname.min.js (Minified version of the above file)
   * projectname.css  (Unminified css file containing concatenated result of all css files)
   * projectname.min.css  (Minified version of the above file)
-* Commit your changes and submit a pull request to master
+* Commit your changes (including files in dist) and submit a pull request to master
 * After the pull request is merged, create a new release:
   * `grunt bump`
+  * This will bump the patch version of the bower.json and package.json as well as create a tag for the new version and will automatically commit and push all changes.
+  * If your changes are for a new minor release (meaning there are significant, yet backwards-compatible changes) use `grunt bump:minor`
+  * If your changes are for a new major release (meaning there are breaking changes) use `grunt bump:major` 
 
 * Checkout the [docs](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages) project by switching to the gh-pages branch
 * Follow the instructions for that project on how to add a simple usage example to the existing page
