@@ -9,7 +9,7 @@
     describe('truncate filter', function () {
         var truncate, shortText, longText;
         beforeEach(function () {
-            module('filters.truncate');
+            module('fss.filters.truncate');
             inject(function ($filter) {
                 truncate = $filter('fssTruncate');
             });

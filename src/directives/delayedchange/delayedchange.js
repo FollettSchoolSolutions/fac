@@ -3,7 +3,7 @@
 
   var DEFAULT_DELAY = 1000;
 
-  angular.module('directives.delayedchange', [])
+  angular.module('fss.directives.delayedchange', [])
 
     // Directive that waits until changes stop for a specified time interval
     // before executing the expression.

@@ -10,7 +10,7 @@
         var compile, rootScope, dts;
 
         beforeEach(function () {
-            module('templates', 'directives.dateshim');
+            module('templates', 'fss.directives.dateshim');
             inject(function ($compile, $rootScope, DateTimeService) {
                 compile = $compile;
                 rootScope = $rootScope;

@@ -314,7 +314,7 @@
 	}
 
 	//define fssSanitize module and register $fssSanitize service
-	angular.module('fssSanitize', []).value('fssSanitize', fsssanitize);
+	angular.module('fss.directives.sanitize', []).value('fssSanitize', fsssanitize);
 
 	/** fssBindHtml directive
 	 * Usage:
@@ -322,7 +322,7 @@
 	 * This will cause all html to be removed from the unsafeTextInHere and stuck within the div
 	 *
 	 */
-	angular.module('fssSanitize').directive('fssBindHtml', ['fssSanitize', function(fssSanitize) {
+	angular.module('fss.directives.sanitize').directive('fssBindHtml', ['fssSanitize', function(fssSanitize) {
 	  return function(scope, element, attr) {
 	    element.addClass('ng-binding').data('$binding', attr.fssBindHtml);
 	    scope.$watch(attr.fssBindHtml, function ngBindHtmlWatchAction(value) {

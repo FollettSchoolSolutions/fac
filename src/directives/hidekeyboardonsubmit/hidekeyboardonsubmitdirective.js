@@ -7,7 +7,7 @@
 (function () {
     'use strict';
 
-    angular.module('directives.hidekeyboardonsubmit', [])
+    angular.module('fss.directives.hidekeyboardonsubmit', [])
         .directive('fssHideKeyboardOnSubmit', ['$window', function ($window) {
             return function (scope, element) {
                 element.bind('submit', function () {

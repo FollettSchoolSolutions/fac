@@ -17,7 +17,7 @@
             providerOverride = function ($provide) {
                 $provide.value('$window', fakeWin);
             };
-            module('directives.hidekeyboardonsubmit', providerOverride);
+            module('fss.directives.hidekeyboardonsubmit', providerOverride);
             inject(function ($rootScope, $compile) {
                 rootScope = $rootScope;
                 compile = $compile;

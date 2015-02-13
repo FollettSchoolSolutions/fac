@@ -20,7 +20,7 @@ describe('analytics suite', function () {
         AnalyticsServiceProvider.setGA(fakeGA);
         AnalyticsServiceProvider.enableGA(webPropertyID, {'cookieDomain': 'none'});
       };
-      module('services.analytics', providerOverride);
+      module('fss.services.analytics', providerOverride);
       inject(function (_AnalyticsService_) {
         AnalyticsService = _AnalyticsService_;
       });
@@ -74,7 +74,7 @@ describe('analytics suite', function () {
       providerOverride = function ($provide, AnalyticsServiceProvider) {
         AnalyticsServiceProvider.setGA(undefined);
       };
-      module('services.analytics', providerOverride);
+      module('fss.services.analytics', providerOverride);
       inject(function (_AnalyticsService_) {
         AnalyticsService = _AnalyticsService_;
       });
@@ -97,7 +97,7 @@ describe('analytics suite', function () {
     var AnalyticsService;
 
     beforeEach(function () {
-      module('services.analytics');
+      module('fss.services.analytics');
 
       inject(function (_AnalyticsService_) {
         AnalyticsService = _AnalyticsService_;
