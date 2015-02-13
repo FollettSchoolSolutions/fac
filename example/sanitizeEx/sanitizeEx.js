@@ -7,7 +7,7 @@
 /**
  * Example to show how fssSanitize works.  Sets up initial data to be displayed
  */
-angular.module('sanitizeEx', ['fssSanitize']).controller('SanitizeController', ['$scope', function ($scope) {
+angular.module('sanitizeEx', ['fss.directives.sanitize']).controller('SanitizeController', ['$scope', function ($scope) {
     var viewHelper = {};
     viewHelper.userInput = "<div><span style='color: red'>This is text</span></div>";
     $scope.viewHelper = viewHelper;

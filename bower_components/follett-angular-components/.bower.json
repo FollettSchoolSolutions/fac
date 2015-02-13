@@ -1,0 +1,48 @@
+{
+  "name": "follett-angular-components",
+  "description": "Components helpful to general application development with AngularJS.",
+  "version": "1.2.3",
+  "main": [
+    "follett-angular-components.js",
+    "follett-angular-components.css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "build",
+    "resources",
+    "src",
+    "test",
+    ".gitignore",
+    ".jshintrc",
+    ".travis.yml",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json"
+  ],
+  "keywords": [
+    "follett",
+    "angular",
+    "fss"
+  ],
+  "homepage": "https://github.com/FollettSchoolSolutions/fac",
+  "dependencies": {
+    "angular": "1.2.18",
+    "moment": "2.5.1",
+    "angular-momentjs": "~0.1.8",
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.18"
+  },
+  "_release": "1.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.3",
+    "commit": "4fd8d7a2fa56c496e62c3cb90ce4b2bb6b72868f"
+  },
+  "_source": "git://github.com/FollettSchoolSolutions/fac.git",
+  "_target": "~1.2.3",
+  "_originalSource": "follett-angular-components",
+  "_direct": true
+}

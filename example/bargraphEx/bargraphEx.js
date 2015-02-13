@@ -7,7 +7,7 @@
 /**
  * Example to show how fssBargraph works.
  */
-angular.module('bargraphEx', ['directives.bargraph']).controller('bargraphController', ['$scope', function ($scope) {
+angular.module('bargraphEx', ['fss.directives.bargraph']).controller('bargraphController', ['$scope', function ($scope) {
     var items = [], temp = {name: "", number: 0};
     function createItem(name, count, style) {
         return {text: name, count: count, style: style || 'blue-bar'};

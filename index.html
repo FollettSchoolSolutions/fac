@@ -3,34 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Example usage</title>
-    <link rel="stylesheet" href="assets/stylesheets/foundation.min.css">
-    <link rel="stylesheet" href="assets/stylesheets/rainbow.css">
-    <link rel="stylesheet" href="assets/stylesheets/app.css">
-    <link rel="stylesheet" href="graph-1.1.css">
-    
-    <!-- Foundation stuff -->
-    <script src="assets/lib/foundation/foundation.min.js"></script>
-    <script src="assets/lib/foundation/modernizr.foundation.js"></script>
-    <script src="assets/lib/foundation/app.js"></script>
-    <script src="assets/lib/foundation/jquery.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.accordion.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.alerts.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.buttons.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.forms.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.mediaQueryToggle.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.navigation.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.orbit.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.reveal.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.tabs.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.tooltips.js"></script>
-    <script src="assets/lib/foundation/jquery.foundation.topbar.js"></script>
-    <script src="assets/lib/foundation/jquery.placeholder.js"></script>
-    <script src="assets/lib/rainbow/rainbow-custom.min.js"></script>    
 
-    <!-- Angular libs -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+    <!-- Bower CSS -->
+    <link rel="stylesheet" href="bower_components/follett-angular-components/dist/follett-angular-components.css">
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+    <link rel="stylesheet" href="bower_components/foundation/css/normalize.css">
+
+    <!-- Other CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/rainbow.css">
+
+    <!-- Bower dependencies -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-momentjs/angular-momentjs.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/follett-angular-components/dist/follett-angular-components.js"></script>
+    <script src="bower_components/foundation/js/foundation.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+
+    <!-- Other dependencies -->
+    <script src="assets/lib/rainbow/rainbow-custom.min.js"></script>
+
     <!-- Application files -->
-    <script src="fac-1.1.min.js"></script>
     <script src="example/sanitizeEx/sanitizeEx.js"></script>
     <script src="example/dateshimEx/dateshimEx.js"></script>
     <script src="example/hidekeyboardonsubmitEx/hidekeyboardonsubmitEx.js"></script>
@@ -40,7 +37,7 @@
 
   </head>
   <body data-ng-show="ready">
-    <nav class="top-bar"> 
+    <nav class="top-bar">
       <ul>
         <li class="name">
           <h1>
@@ -59,7 +56,7 @@
         It then takes the resulting "cleaned" text and inserts as html to the destination element.  The character escaped
         entities will then display correctly.  This directive is a modification of the ng-sanitize directive by Misko Hevery.
         Instead of having some html elements that are whitelisted, all have been removed from the whitelist so that no html
-        elements will be allowed.   
+        elements will be allowed.
         </span>
       </div>
     </div>
@@ -94,11 +91,11 @@
         This means you can rely on the model value, if set, to be a valid date.  Also, it can be used with browsers that do not natively support a date picker.
         The behavior in this is just the same, the difference being that dates must be entered as text.  The model will only be updated if a valid date is entered.
         There are 2 optional directives (validators) that may be specified which modify what is considered an invalid date and influence which error messages
-        will be set.  
+        will be set.
         <br>
         <i>iso-date</i> will set an error on the form named "validDate" if the model is not set with a valid iso8601 date
-        <br> 
-        <i>future</i>   will set an error on the form named "currentDate" if the model is a date prior to today. 
+        <br>
+        <i>future</i>   will set an error on the form named "currentDate" if the model is a date prior to today.
         </span>
       </div>
     </div>
@@ -136,7 +133,7 @@
         <br>
         This directive can be added to a form element and will cause the keyboard to disappear after 'Go' is chosen and
         the form is submitted.  Try enter text in each box below (on a mobile device) to see the difference with and without
-        the directive.  
+        the directive.
         </span>
       </div>
     </div>
