@@ -12,6 +12,7 @@
   ],
   "homepage": "https://github.com/FollettSchoolSolutions/fac",
   "dependencies": {
+    "angular-foundation": "~0.5.1",
     "foundation": "~5.5.1"
   },
   "devDependencies": {

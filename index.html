@@ -13,16 +13,14 @@
     <link rel="stylesheet" href="assets/stylesheets/rainbow.css">
 
     <!-- Bower dependencies -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-momentjs/angular-momentjs.js"></script>
-    <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="bower_components/follett-angular-components/dist/follett-angular-components.js"></script>
-    <script src="bower_components/foundation/js/foundation.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-momentjs/angular-momentjs.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/angular-foundation/mm-foundation.js"></script>
+    <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
+    <script src="bower_components/follett-angular-components/dist/follett-angular-components.js"></script>
 
     <!-- Other dependencies -->
     <script src="assets/lib/rainbow/rainbow-custom.min.js"></script>
@@ -46,6 +44,7 @@
         </li>
       </ul>
     </nav>
+
     <!-- *******************   BEGIN fssSanitize example  ********************** -->
     <hr>
     <div class="row vertical-spacer-small">
@@ -62,16 +61,12 @@
     </div>
     <div class="row vertical-spacer-small">
       <div class="twelve columns">
-        <dl class="tabs">
-          <dd class="active"><a href="#sanitizeJS">Javascript</a></dd>
-          <dd><a href="#sanitizeHtml">HTML</a></dd>
-        </dl>
-        <ul class="tabs-content">
-          <li class="active" id="sanitizeJSTab">
+        <ul data-tabset>
+          <li data-tab heading="JavaScript">
             <span data-sample="example/sanitizeEx/sanitizeEx.js" data-language="javascript">
             </span>
           </li>
-          <li id="sanitizeHtmlTab">
+          <li data-tab heading="HTML">
             <span data-sample="example/sanitizeEx/sanitizeEx.html" data-language="html">
             </span>
           </li>
@@ -101,16 +96,12 @@
     </div>
     <div class="row vertical-spacer-small">
       <div class="twelve columns">
-        <dl class="tabs">
-          <dd class="active"><a href="#dateshimJS">Javascript</a></dd>
-          <dd><a href="#dateshimHtml">HTML</a></dd>
-        </dl>
-        <ul class="tabs-content">
-          <li class="active" id="dateshimJSTab">
+        <ul data-tabset>
+          <li data-tab heading="JavaScript">
             <span data-sample="example/dateshimEx/dateshimEx.js" data-language="javascript">
             </span>
           </li>
-          <li id="dateshimHtmlTab">
+          <li data-tab heading="HTML">
             <span data-sample="example/dateshimEx/dateshimEx.html" data-language="html">
             </span>
           </li>
@@ -139,16 +130,12 @@
     </div>
     <div class="row vertical-spacer-small">
       <div class="twelve columns">
-        <dl class="tabs">
-          <dd class="active"><a href="#hidekbJS">Javascript</a></dd>
-          <dd><a href="#hidekbHtml">HTML</a></dd>
-        </dl>
-        <ul class="tabs-content">
-          <li class="active" id="hidekbJSTab">
+        <ul data-tabset>
+          <li data-tab heading="JavaScript">
             <span data-sample="example/hidekeyboardonsubmitEx/hidekeyboardonsubmitEx.js" data-language="javascript">
             </span>
           </li>
-          <li id="hidekbHtmlTab">
+          <li data-tab heading="HTML">
             <span data-sample="example/hidekeyboardonsubmitEx/hidekeyboardonsubmitEx.html" data-language="html">
             </span>
           </li>
@@ -180,16 +167,12 @@
     </div>
     <div class="row vertical-spacer-small">
       <div class="twelve columns">
-        <dl class="tabs">
-          <dd class="active"><a href="#bargraphJS">Javascript</a></dd>
-          <dd><a href="#bargraphHtml">HTML</a></dd>
-        </dl>
-        <ul class="tabs-content">
-          <li class="active" id="bargraphJSTab">
+        <ul data-tabset>
+          <li data-tab heading="JavaScript">
             <span data-sample="example/bargraphEx/bargraphEx.js" data-language="javascript">
             </span>
           </li>
-          <li id="bargraphHtmlTab">
+          <li data-tab heading="HTML">
             <span data-sample="example/bargraphEx/bargraphEx.html" data-language="html">
             </span>
           </li>
@@ -215,16 +198,12 @@
     </div>
     <div class="row vertical-spacer-small">
       <div class="twelve columns">
-        <dl class="tabs">
-          <dd class="active"><a href="#truncateJS">Javascript</a></dd>
-          <dd><a href="#truncateHtml">HTML</a></dd>
-        </dl>
-        <ul class="tabs-content">
-          <li class="active" id="truncateJSTab">
+        <ul data-tabset>
+          <li data-tab heading="JavaScript">
             <span data-sample="example/truncateEx/truncateEx.js" data-language="javascript">
             </span>
           </li>
-          <li id="truncateHtmlTab">
+          <li data-tab heading="HTML">
             <span data-sample="example/truncateEx/truncateEx.html" data-language="html">
             </span>
           </li>
@@ -237,5 +216,6 @@
     <div class="row vertical-spacer-medium">
     </div>
     <!-- *******************   END fssTruncate example  ********************** -->
+    <hr>
   </body>
 </html>

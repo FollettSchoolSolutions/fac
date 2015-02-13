@@ -18,12 +18,12 @@
      * {count: 40, style: 'red'}
      * Style is an optional property which if specified will be applied to the vertical bar
      * This is useful for applying custom colors to each vertical bar graph on a per item basis
-     * 
-     * The graph will be constructed as a vertical graph, with each item representing 1 vertical bar, and the count dictates how tall a particular item 
+     *
+     * The graph will be constructed as a vertical graph, with each item representing 1 vertical bar, and the count dictates how tall a particular item
      * will be drawn in relation to the other bars
      * @module directives.bargraph
      */
-    angular.module('directives.bargraph', [])
+    angular.module('fss.directives.bargraph', [])
 
         .directive('fssBarGraph', [function barGraphDirective() {
             return {
@@ -95,7 +95,7 @@
 (function (angular) {
   'use strict';
 
-  angular.module('directives.dateinput', ['ngMoment'])
+  angular.module('fss.directives.dateinput', ['ngMoment'])
 
     .directive('fssDateInput', ['$moment', '$window', function ($moment, $window) {
       return {
@@ -214,7 +214,7 @@
  * format (yyyy-mm-dd).  For the case of browsers which do not support the native date picker, the model will
  * remain null until a valid date has been entered.
  */
-    angular.module('directives.dateshim', ['fss.services.datetime'])
+    angular.module('fss.directives.dateshim', ['fss.services.datetime'])
         .directive('fssDateShim', ['DateTimeService', function (dts) {
             return {
                 restrict: 'A',
@@ -360,7 +360,7 @@
 
   var DEFAULT_DELAY = 1000;
 
-  angular.module('directives.delayedchange', [])
+  angular.module('fss.directives.delayedchange', [])
 
     // Directive that waits until changes stop for a specified time interval
     // before executing the expression.
@@ -386,7 +386,7 @@
 
   'use strict';
 
-  angular.module('directives.focus', [])
+  angular.module('fss.directives.focus', [])
 
     .directive('fssFocus', ['$timeout', function($timeout) {
       return {
@@ -416,7 +416,7 @@
 (function () {
     'use strict';
 
-    angular.module('directives.hidekeyboardonsubmit', [])
+    angular.module('fss.directives.hidekeyboardonsubmit', [])
         .directive('fssHideKeyboardOnSubmit', ['$window', function ($window) {
             return function (scope, element) {
                 element.bind('submit', function () {
@@ -430,7 +430,7 @@
 
   'use strict';
 
-  angular.module('directives.highlightonclick', [])
+  angular.module('fss.directives.highlightonclick', [])
 
     .directive('fssHighlightOnClick', [function () {
       return {
@@ -447,7 +447,7 @@
 
   'use strict';
 
-  angular.module('directives.loading', [])
+  angular.module('fss.directives.loading', [])
 
     .directive('fssLoading', [function () {
       return {
@@ -779,7 +779,7 @@
 	}
 
 	//define fssSanitize module and register $fssSanitize service
-	angular.module('fssSanitize', []).value('fssSanitize', fsssanitize);
+	angular.module('fss.directives.sanitize', []).value('fssSanitize', fsssanitize);
 
 	/** fssBindHtml directive
 	 * Usage:
@@ -787,7 +787,7 @@
 	 * This will cause all html to be removed from the unsafeTextInHere and stuck within the div
 	 *
 	 */
-	angular.module('fssSanitize').directive('fssBindHtml', ['fssSanitize', function(fssSanitize) {
+	angular.module('fss.directives.sanitize').directive('fssBindHtml', ['fssSanitize', function(fssSanitize) {
 	  return function(scope, element, attr) {
 	    element.addClass('ng-binding').data('$binding', attr.fssBindHtml);
 	    scope.$watch(attr.fssBindHtml, function ngBindHtmlWatchAction(value) {
@@ -815,7 +815,7 @@
 
   'use strict';
 
-  angular.module('directives.scrollto', [])
+  angular.module('fss.directives.scrollto', [])
 
     .directive('fssScrollTo', ['$window', function ($window) {
       return {
@@ -867,7 +867,7 @@
         @param string, default = "..."
         @return string
      */
-    angular.module('filters.truncate', [])
+    angular.module('fss.filters.truncate', [])
         .filter('fssTruncate', function () {
             return function (text, length, end) {
                 if (isNaN(length)) {
@@ -888,10 +888,30 @@
         });
 }());
 
+(function (angular) {
+  'use strict';
+
+  angular.module('fac', [
+    'fss.directives.bargraph',
+    'fss.directives.dateinput',
+    'fss.directives.dateshim',
+    'fss.directives.delayedchange',
+    'fss.directives.focus',
+    'fss.directives.hidekeyboardonsubmit',
+    'fss.directives.highlightonclick',
+    'fss.directives.loading',
+    'fss.directives.sanitize',
+    'fss.directives.scrollto',
+    'fss.filters.truncate',
+    'fss.services.analytics',
+    'fss.services.datetime',
+    'fss.services.fssapi'
+  ]);
+}(angular));
 (function () {
   'use strict';
 
-  angular.module('services.analytics', [])
+  angular.module('fss.services.analytics', [])
 
     .provider('AnalyticsService', function () {
       var gaToUse;
@@ -1188,7 +1208,7 @@
    *
    * @module fssApi
    */
-  angular.module('services.fssapi', [])
+  angular.module('fss.services.fssapi', [])
 
     /**
      * Provider for `fssApi`.
@@ -1439,7 +1459,7 @@
     }]);
 
 }(angular));
-angular.module('fss.templates').run(['$templateCache', function($templateCache) {
+angular.module('fac').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('directives/dateshim/dateshim.html',
