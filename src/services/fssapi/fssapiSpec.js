@@ -5,7 +5,7 @@ describe('fssApi', function () {
   var provide;
 
   // Create a test configuration of an api
-  angular.module('testFssApi', ['services.fssapi'])
+  angular.module('testFssApi', ['fss.services.fssapi'])
     .config(function (fssApiProvider) {
       fssApiProvider
         .resource('ComicBooksResource', {

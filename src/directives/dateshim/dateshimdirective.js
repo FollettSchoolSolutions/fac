@@ -14,7 +14,7 @@
  * format (yyyy-mm-dd).  For the case of browsers which do not support the native date picker, the model will
  * remain null until a valid date has been entered.
  */
-    angular.module('directives.dateshim', ['fss.services.datetime'])
+    angular.module('fss.directives.dateshim', ['fss.services.datetime'])
         .directive('fssDateShim', ['DateTimeService', function (dts) {
             return {
                 restrict: 'A',

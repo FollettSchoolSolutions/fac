@@ -9,7 +9,7 @@
     describe('fss sanitize', function () {
         var sanitize, rootScope, compile;
         beforeEach(function () {
-            module('fssSanitize');
+            module('fss.directives.sanitize');
             inject(function (fssSanitize, $rootScope, $compile) {
                 sanitize = fssSanitize;
                 rootScope = $rootScope;

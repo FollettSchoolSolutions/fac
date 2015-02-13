@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('services.analytics', [])
+  angular.module('fss.services.analytics', [])
 
     .provider('AnalyticsService', function () {
       var gaToUse;

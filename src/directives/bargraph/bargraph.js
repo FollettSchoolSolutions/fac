@@ -18,12 +18,12 @@
      * {count: 40, style: 'red'}
      * Style is an optional property which if specified will be applied to the vertical bar
      * This is useful for applying custom colors to each vertical bar graph on a per item basis
-     * 
-     * The graph will be constructed as a vertical graph, with each item representing 1 vertical bar, and the count dictates how tall a particular item 
+     *
+     * The graph will be constructed as a vertical graph, with each item representing 1 vertical bar, and the count dictates how tall a particular item
      * will be drawn in relation to the other bars
      * @module directives.bargraph
      */
-    angular.module('directives.bargraph', [])
+    angular.module('fss.directives.bargraph', [])
 
         .directive('fssBarGraph', [function barGraphDirective() {
             return {

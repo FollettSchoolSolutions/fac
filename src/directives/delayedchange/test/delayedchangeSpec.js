@@ -1,13 +1,13 @@
 (function () {
   'use strict';
 
-  describe('directives.delayedchange', function () {
+  describe('fss.directives.delayedchange', function () {
 
     describe('fssDelayedChange', function () {
       var $timeout, $compile, $rootScope;
 
       beforeEach(function () {
-        module('directives.delayedchange');
+        module('fss.directives.delayedchange');
         inject(function (_$timeout_, _$compile_, _$rootScope_) {
           $timeout = _$timeout_;
           $compile = _$compile_;

@@ -1,11 +1,11 @@
 'use strict';
 
-describe('directives.fssloading', function () {
+describe('fss.directives.fssloading', function () {
 
   var rootScope, compile;
 
   beforeEach(function () {
-    module('directives.loading', 'templates');
+    module('fss.directives.loading', 'templates');
     inject(function($compile, $rootScope) {
       rootScope = $rootScope.$new();
       compile = $compile;

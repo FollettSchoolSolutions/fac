@@ -1,12 +1,12 @@
 'use strict';
 
-describe('directives.scrollto', function () {
+describe('fss.directives.scrollto', function () {
 
   var $window, $compile, $rootScope, $scope;
 
   beforeEach(function () {
     $window = jasmine.createSpyObj('$window', ['scrollTo']);
-    module('directives.scrollto', function ($provide) {
+    module('fss.directives.scrollto', function ($provide) {
       $provide.value('$window', $window);
     });
 

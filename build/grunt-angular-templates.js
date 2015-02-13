@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       src: 'src/**/*.html',
       dest: '.tmp/templates.js',
       options: {
-        module: 'fss.templates',
+        module: 'fac',
         url: function(url) {
           return url.replace('src/', '');
         },

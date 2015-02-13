@@ -9,7 +9,7 @@
     describe('BarGraphDirective', function () {
         var testData, $scope, $compile;
         beforeEach(function () {
-            module('directives.bargraph');
+            module('fss.directives.bargraph');
             inject(['$rootScope', '$compile', function (rootScope, compile) {
                 $scope = rootScope.$new();
                 $compile = compile;

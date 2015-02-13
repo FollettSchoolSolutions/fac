@@ -30,7 +30,7 @@
         @param string, default = "..."
         @return string
      */
-    angular.module('filters.truncate', [])
+    angular.module('fss.filters.truncate', [])
         .filter('fssTruncate', function () {
             return function (text, length, end) {
                 if (isNaN(length)) {

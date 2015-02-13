@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('directives.highlightonclick', [])
+  angular.module('fss.directives.highlightonclick', [])
 
     .directive('fssHighlightOnClick', [function () {
       return {

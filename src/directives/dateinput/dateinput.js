@@ -1,7 +1,7 @@
 (function (angular) {
   'use strict';
 
-  angular.module('directives.dateinput', ['ngMoment'])
+  angular.module('fss.directives.dateinput', ['ngMoment'])
 
     .directive('fssDateInput', ['$moment', '$window', function ($moment, $window) {
       return {

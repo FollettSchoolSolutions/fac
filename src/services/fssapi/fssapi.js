@@ -86,7 +86,7 @@
    *
    * @module fssApi
    */
-  angular.module('services.fssapi', [])
+  angular.module('fss.services.fssapi', [])
 
     /**
      * Provider for `fssApi`.

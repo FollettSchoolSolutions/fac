@@ -1,12 +1,12 @@
 (function () {
   'use strict';
 
-  describe('directives.dateinput', function () {
+  describe('fss.directives.dateinput', function () {
 
     var $compile, $rootScope, $window, $moment;
 
     beforeEach(function () {
-      module('directives.dateinput');
+      module('fss.directives.dateinput');
       inject(function (_$compile_, _$rootScope_, _$window_, _$moment_) {
         $compile = _$compile_;
         $rootScope = _$rootScope_;

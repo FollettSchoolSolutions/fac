@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('directives.scrollto', [])
+  angular.module('fss.directives.scrollto', [])
 
     .directive('fssScrollTo', ['$window', function ($window) {
       return {

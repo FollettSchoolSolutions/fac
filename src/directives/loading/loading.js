@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('directives.loading', [])
+  angular.module('fss.directives.loading', [])
 
     .directive('fssLoading', [function () {
       return {
