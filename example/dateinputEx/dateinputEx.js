@@ -7,7 +7,9 @@
 /**
  * Example to show how fssDateShim works.  Sets up initial data to be displayed
  */
-angular.module('dateshimEx', ['fac']).controller('DateController', ['$scope', function ($scope) {
-	$scope.simple = "2010-07-04";
-	$scope.simpleText = "2010-07-05";
+angular.module('dateinputEx', []).controller('DateController', ['$scope', function ($scope) {
+  $scope.date1 = new Date();
+  $scope.date2 = new Date();
+  $scope.date2.setDate($scope.date2.getDate() - 1);
+  $scope.date3 = null;
 }]);

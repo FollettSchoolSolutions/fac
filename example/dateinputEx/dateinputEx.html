@@ -1,0 +1,25 @@
+<div data-ng-controller="DateController">
+  <div class="row vertical-spacer-medium">
+  </div>
+  <div class="row">
+    <div class="small-6 columns">
+      <strong>Inputs</strong>
+      <form name="form">
+        <label>Date input
+          <input name="date1" data-fss-date-input data-ng-model="date1">
+        </label>
+        <label data-ng-class="{error: form.date2.$error.dateInPast}">Today or later
+          <input name="date2" data-fss-date-input data-fss-today-or-later data-ng-model="date2">
+        </label>
+        <small data-ng-show="form.date2.$error.dateInPast" class="error">Date can't be in the past.</small>
+        <label>End of Day
+          <input name="date3" data-fss-date-input data-fss-end-of-day data-ng-model="date3">
+        </label>
+      </form>
+      <strong>Model Values</strong>
+      <div>$scope.date1: {{date1 | date: 'yyyy-MM-dd HH:mm:ss'}}</div>
+      <div>$scope.date2: {{date2 | date: 'yyyy-MM-dd HH:mm:ss'}}</div>
+      <div>$scope.date3: {{date3 | date: 'yyyy-MM-dd HH:mm:ss'}}</div>
+    </div>
+  </div>
+</div>

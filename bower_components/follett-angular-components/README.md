@@ -9,7 +9,8 @@ This project houses components helpful to general application development with A
 ####Installation
 
 ######Versions 1.2 and later
-From the command line: `bower install follett-angular-components`
+From the command line: `bower install follett-angular-components --save`
+
 In your html file:
 
     <link rel="stylesheet" href="bower_components/follett-angular-componenets/dist/follett-angular-componenets.css" />
@@ -17,7 +18,7 @@ In your html file:
     <script src="bower_components/follett-angular-componenets/dist/follett-angular-componenets.js"></script>
 
 ######Older versions
-[https://github.com/FollettSchoolSolutions/fac/tree/gh-pages](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages)
+[https://github.com/FollettSchoolSolutions/fac/tree/archive](https://github.com/FollettSchoolSolutions/fac/tree/archive)
 
 ####Versions
 1.0
@@ -32,10 +33,14 @@ In your html file:
 
 * Compatible with AngularJS 1.2.18
 
+1.3
+
+* Compatible with AngularJS 1.3.13
+
 ####Documentation
 [http://follettschoolsolutions.github.io/fac/](http://follettschoolsolutions.github.io/fac/)
 
-##Development
+##Contributing
 ####Pre-requisites to building the project
 * [NodeJS](http://nodejs.org/)
 * Bower
@@ -43,10 +48,13 @@ In your html file:
 * Grunt
   * `npm install -g grunt-cli`
 
-####Contributing
+####Guidelines
 
 * Clone the project and create a new branch off of master
-* Add the new component to its' own directory under one of the broad categories (directives/filters etc, adding a new category if applicable)
+* From the root directory, run `npm install && bower install` to install project dependencies
+* Add your new component to its own directory under one of the broad categories (directives/filters etc, adding a new category if applicable)
+  * All directive names should have the prefix 'fss'
+  * All module names should be in the form '[services|directives|filters|etc].mymodulename'
 * Add the new spec file for your component to a directory named 'test' as a subfolder of the above directory
   * Look at the existing components for an example of this if you are unsure where this goes
 * Test and lint it by typing `grunt` in the project root directory
@@ -56,10 +64,12 @@ In your html file:
   * projectname.min.js (Minified version of the above file)
   * projectname.css  (Unminified css file containing concatenated result of all css files)
   * projectname.min.css  (Minified version of the above file)
-* Commit your changes and submit a pull request to master
+* Commit your changes (including files in dist) and submit a pull request to master
 * After the pull request is merged, create a new release:
-  * `git tag -a v1.3.5 -m 'fac v1.3.5'`
-  * `git push origin master --tags`
+  * `grunt bump`
+  * This will bump the patch version of the bower.json and package.json as well as create a tag for the new version and will automatically commit and push all changes.
+  * If your changes are for a new minor release (meaning there are significant, yet backwards-compatible changes) use `grunt bump:minor`
+  * If your changes are for a new major release (meaning there are breaking changes) use `grunt bump:major`
 
 * Checkout the [docs](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages) project by switching to the gh-pages branch
 * Follow the instructions for that project on how to add a simple usage example to the existing page

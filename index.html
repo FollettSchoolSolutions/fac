@@ -27,7 +27,7 @@
 
     <!-- Application files -->
     <script src="example/sanitizeEx/sanitizeEx.js"></script>
-    <script src="example/dateshimEx/dateshimEx.js"></script>
+    <script src="example/dateinputEx/dateinputEx.js"></script>
     <script src="example/hidekeyboardonsubmitEx/hidekeyboardonsubmitEx.js"></script>
     <script src="example/bargraphEx/bargraphEx.js"></script>
     <script src="example/truncateEx/truncateEx.js"></script>
@@ -77,20 +77,20 @@
     <div data-ng-include="'example/sanitizeEx/sanitizeEx.html'">
     </div>
     <!-- *******************   END fssSanitize example  ********************** -->
-    <!-- *******************   BEGIN fssDateShim example  ********************** -->
+    <!-- *******************   BEGIN fssDateInput example  ********************** -->
     <hr>
     <div class="row vertical-spacer-small">
       <div class="twelve columns">
-        <h4>fss-date-shim directive</h4>
-        <span>The fss-date-shim is used to populate a model with a common date format (ISO8601) and prevents invalid dates from being set on the model.
-        This means you can rely on the model value, if set, to be a valid date.  Also, it can be used with browsers that do not natively support a date picker.
-        The behavior in this is just the same, the difference being that dates must be entered as text.  The model will only be updated if a valid date is entered.
-        There are 2 optional directives (validators) that may be specified which modify what is considered an invalid date and influence which error messages
-        will be set.
+        <h4>fss-date-input directive</h4>
+        <span>The fss-date-input is used to populate a model with JavaScript Date object and prevents invalid dates from being set on the model.
+        This means you can rely on the model value, if set, to be a valid date.
+        It will automatically detect an invalid date and will set an error on the form named "invalidDate".
+        Also, it can be used with browsers that do not natively support a date picker. The behavior in this is just the same, the difference being that dates must be entered as text in the form MM/DD/YYYY.
+        There are 2 optional directives that can be used with the fss-date-input directive.
         <br>
-        <i>iso-date</i> will set an error on the form named "validDate" if the model is not set with a valid iso8601 date
+        <i>fss-today-or-later</i> will set an error on the form named "dateInPast" if the date is before the current day
         <br>
-        <i>future</i>   will set an error on the form named "currentDate" if the model is a date prior to today.
+        <i>fss-end-of-day</i> will automatically set the model value to be the last millisecond of the day
         </span>
       </div>
     </div>
@@ -98,18 +98,18 @@
       <div class="twelve columns">
         <ul data-tabset>
           <li data-tab heading="JavaScript">
-            <span data-sample="example/dateshimEx/dateshimEx.js" data-language="javascript">
+            <span data-sample="example/dateinputEx/dateinputEx.js" data-language="javascript">
             </span>
           </li>
           <li data-tab heading="HTML">
-            <span data-sample="example/dateshimEx/dateshimEx.html" data-language="html">
+            <span data-sample="example/dateinputEx/dateinputEx.html" data-language="html">
             </span>
           </li>
         </ul>
       </div>
     </div>
     <!-- Includes sample in page so it actually is executed -->
-    <div data-ng-include="'example/dateshimEx/dateshimEx.html'">
+    <div data-ng-include="'example/dateinputEx/dateinputEx.html'">
     </div>
     <!-- *******************   END fssDateShim example  ********************** -->
     <!-- *******************   BEGIN fssHideKeyboardOnSubmit example  ********************** -->

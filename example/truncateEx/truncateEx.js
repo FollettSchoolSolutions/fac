@@ -7,6 +7,6 @@
 /**
  * Example to show how truncate filter works.
  */
-angular.module('truncateEx', ['fss.filters.truncate']).controller('truncateController', ['$scope', function ($scope) {
+angular.module('truncateEx', []).controller('truncateController', ['$scope', function ($scope) {
     $scope.text = "Here is some text that will be truncated because it is longer than the truncate number";
 }]);
