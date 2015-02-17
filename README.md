@@ -33,6 +33,10 @@ In your html file:
 
 * Compatible with AngularJS 1.2.18
 
+1.3
+
+* Compatible with AngularJS 1.3.13
+
 ####Documentation
 [http://follettschoolsolutions.github.io/fac/](http://follettschoolsolutions.github.io/fac/)
 
@@ -65,7 +69,7 @@ In your html file:
   * `grunt bump`
   * This will bump the patch version of the bower.json and package.json as well as create a tag for the new version and will automatically commit and push all changes.
   * If your changes are for a new minor release (meaning there are significant, yet backwards-compatible changes) use `grunt bump:minor`
-  * If your changes are for a new major release (meaning there are breaking changes) use `grunt bump:major` 
+  * If your changes are for a new major release (meaning there are breaking changes) use `grunt bump:major`
 
 * Checkout the [docs](https://github.com/FollettSchoolSolutions/fac/tree/gh-pages) project by switching to the gh-pages branch
 * Follow the instructions for that project on how to add a simple usage example to the existing page
