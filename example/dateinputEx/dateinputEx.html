@@ -5,9 +5,10 @@
     <div class="small-6 columns">
       <strong>Inputs</strong>
       <form name="form">
-        <label>Date input
+        <label data-ng-class="{error: form.date1.$error.invalidDate}">Date input
           <input name="date1" data-fss-date-input data-ng-model="date1">
         </label>
+        <small data-ng-show="form.date1.$error.invalidDate" class="error">Invalid date.</small>
         <label data-ng-class="{error: form.date2.$error.dateInPast}">Today or later
           <input name="date2" data-fss-date-input data-fss-today-or-later data-ng-model="date2">
         </label>

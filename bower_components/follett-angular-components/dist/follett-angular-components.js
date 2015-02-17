@@ -103,11 +103,10 @@
         restrict:'A',
         controller: angular.noop,
         link: function ($scope, element, attrs, modelCtrl) {
-          var USER_FRIENDLY_FORMAT, USER_FRIENDLY_PARSING_FORMAT, ISO_FORMAT, RFD_FORMAT, canUseDatePicker;
+          var USER_FRIENDLY_FORMAT, USER_FRIENDLY_PARSING_FORMAT, ISO_FORMAT, canUseDatePicker;
           USER_FRIENDLY_FORMAT = 'MM/DD/YYYY';
           USER_FRIENDLY_PARSING_FORMAT = 'M/D/YYYY';
           ISO_FORMAT = 'YYYY-MM-DD';
-          RFD_FORMAT = 'ddd MMM DD YYYY HH:mm:ss';
           canUseDatePicker = $window.Modernizr.inputtypes.date;
 
           if (canUseDatePicker) {
@@ -121,9 +120,9 @@
 
             if (modelValue) {
               if (canUseDatePicker) {
-                dateString = $moment(modelValue, RFD_FORMAT).format(ISO_FORMAT);
+                dateString = $moment(modelValue).format(ISO_FORMAT);
               } else {
-                dateString = $moment(modelValue, RFD_FORMAT).format(USER_FRIENDLY_FORMAT);
+                dateString = $moment(modelValue).format(USER_FRIENDLY_FORMAT);
               }
             }
             return dateString;
@@ -819,7 +818,7 @@
 (function () {
     'use strict';
     /**
-     * DateTimeService helps with some of the date manipulation needed by the library.
+     * DateTimeService helps with some of the date manipulation needed by the library.  
      * Note: it is deficient at the time of writing.  It does not respect locale.  It assumes that a formatted date will be of form
      * mm/dd/yyyy and that a valid date will be in that format as well.
      * The other methods related to iso8601 perform as expected.
@@ -832,7 +831,7 @@
                 DATE_SEPARATOR = "/";
 
             /**
-             * Tests whether date conforms to mm/dd/yyyy format.
+             * Tests whether date conforms to mm/dd/yyyy format.  
              * @param dateStr a date string to validate
              * @returns {Boolean} for whether the passed string is a valid, parsable date.
              */
