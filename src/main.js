@@ -4,7 +4,6 @@
   angular.module('fac', [
     'fss.directives.bargraph',
     'fss.directives.dateinput',
-    'fss.directives.dateshim',
     'fss.directives.delayedchange',
     'fss.directives.focus',
     'fss.directives.hidekeyboardonsubmit',
