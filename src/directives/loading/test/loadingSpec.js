@@ -5,7 +5,7 @@ describe('fss.directives.fssloading', function () {
   var rootScope, compile;
 
   beforeEach(function () {
-    module('fss.directives.loading', 'templates');
+    module('fss.directives.loading');
     inject(function($compile, $rootScope) {
       rootScope = $rootScope.$new();
       compile = $compile;

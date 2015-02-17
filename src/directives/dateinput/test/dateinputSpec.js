@@ -189,46 +189,46 @@
         $compile(rawHTML)($scope);
         $rootScope.$digest();
 
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(true);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeTruthy();
 
         $scope.myDate = new Date(4000, 1, 1);
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(false);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeFalsy();
 
         $scope.myDate = new Date(1989, 2, 15);
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(true);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeTruthy();
 
         $scope.myDate = new Date();
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(false);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeFalsy();
 
         // yesterday
         $scope.myDate = new Date();
         $scope.myDate.setDate($scope.myDate.getDate() - 1);
         $scope.myDate.setSeconds($scope.myDate.getSeconds() + 1);
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(true);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeTruthy();
 
         $scope.myDate = null;
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(false);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeFalsy();
 
         $scope.myDate = undefined;
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(false);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeFalsy();
 
         $scope.myDate = '';
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(false);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeFalsy();
 
         $scope.myDate = '   ';
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(false);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeFalsy();
 
         $scope.myDate = ' afd';
         $rootScope.$digest();
-        expect($scope.myForm.myDate.$error.dateInPast).toBe(false);
+        expect($scope.myForm.myDate.$error.dateInPast).toBeFalsy();
       });
     });
 
