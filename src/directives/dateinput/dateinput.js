@@ -9,11 +9,10 @@
         restrict:'A',
         controller: angular.noop,
         link: function ($scope, element, attrs, modelCtrl) {
-          var USER_FRIENDLY_FORMAT, USER_FRIENDLY_PARSING_FORMAT, ISO_FORMAT, RFD_FORMAT, canUseDatePicker;
+          var USER_FRIENDLY_FORMAT, USER_FRIENDLY_PARSING_FORMAT, ISO_FORMAT, canUseDatePicker;
           USER_FRIENDLY_FORMAT = 'MM/DD/YYYY';
           USER_FRIENDLY_PARSING_FORMAT = 'M/D/YYYY';
           ISO_FORMAT = 'YYYY-MM-DD';
-          RFD_FORMAT = 'ddd MMM DD YYYY HH:mm:ss';
           canUseDatePicker = $window.Modernizr.inputtypes.date;
 
           if (canUseDatePicker) {
@@ -27,9 +26,9 @@
 
             if (modelValue) {
               if (canUseDatePicker) {
-                dateString = $moment(modelValue, RFD_FORMAT).format(ISO_FORMAT);
+                dateString = $moment(modelValue).format(ISO_FORMAT);
               } else {
-                dateString = $moment(modelValue, RFD_FORMAT).format(USER_FRIENDLY_FORMAT);
+                dateString = $moment(modelValue).format(USER_FRIENDLY_FORMAT);
               }
             }
             return dateString;

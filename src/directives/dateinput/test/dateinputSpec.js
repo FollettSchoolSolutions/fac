@@ -25,7 +25,7 @@
           var rawHTML, compiledHTML, $scope;
           $scope = $rootScope.$new();
 
-          $scope.myDate = new Date(2050, 2, 15);
+          $scope.myDate = new Date(2015, 2, 15);
           rawHTML = '<input ng-model="myDate" fss-date-input>';
           compiledHTML = $compile(rawHTML)($scope);
           $rootScope.$digest();
@@ -37,19 +37,19 @@
           var rawHTML, compiledHTML, $scope;
           $scope = $rootScope.$new();
 
-          $scope.myDate = new Date(2050, 2, 15);
+          $scope.myDate = new Date(2015, 2, 15);
           rawHTML = '<input ng-model="myDate" fss-date-input>';
           compiledHTML = $compile(rawHTML)($scope);
           $rootScope.$digest();
 
-          expect(compiledHTML.val()).toBe('2050-03-15');
+          expect(compiledHTML.val()).toBe('2015-03-15');
         });
 
         it('should parse user entry into a date', function () {
           var rawHTML, compiledHTML, $scope;
           $scope = $rootScope.$new();
 
-          $scope.myDate = new Date(2050, 2, 15);
+          $scope.myDate = new Date(2015, 2, 15);
           rawHTML = '<input ng-model="myDate" fss-date-input>';
           compiledHTML = $compile(rawHTML)($scope);
           $rootScope.$digest();
@@ -82,7 +82,7 @@
           var rawHTML, compiledHTML, $scope;
           $scope = $rootScope.$new();
 
-          $scope.myDate = new Date(2050, 2, 15);
+          $scope.myDate = new Date(2015, 2, 15);
           rawHTML = '<input ng-model="myDate" fss-date-input>';
           compiledHTML = $compile(rawHTML)($scope);
           $rootScope.$digest();
@@ -94,19 +94,19 @@
           var rawHTML, compiledHTML, $scope;
           $scope = $rootScope.$new();
 
-          $scope.myDate = new Date(2050, 2, 15);
+          $scope.myDate = new Date(2015, 2, 15);
           rawHTML = '<input ng-model="myDate" fss-date-input>';
           compiledHTML = $compile(rawHTML)($scope);
           $rootScope.$digest();
 
-          expect(compiledHTML.val()).toBe('03/15/2050');
+          expect(compiledHTML.val()).toBe('03/15/2015');
         });
 
         it('should parse user entry into a date', function () {
           var rawHTML, compiledHTML, $scope;
           $scope = $rootScope.$new();
 
-          $scope.myDate = new Date(2050, 2, 15);
+          $scope.myDate = new Date(2015, 2, 15);
           rawHTML = '<input ng-model="myDate" fss-date-input>';
           compiledHTML = $compile(rawHTML)($scope);
           $rootScope.$digest();
