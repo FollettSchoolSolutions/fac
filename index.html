@@ -28,6 +28,7 @@
     <!-- Application files -->
     <script src="example/sanitizeEx/sanitizeEx.js"></script>
     <script src="example/dateinputEx/dateinputEx.js"></script>
+    <script src="example/delayedchangeEx/delayedchangeEx.js"></script>
     <script src="example/hidekeyboardonsubmitEx/hidekeyboardonsubmitEx.js"></script>
     <script src="example/bargraphEx/bargraphEx.js"></script>
     <script src="example/truncateEx/truncateEx.js"></script>
@@ -216,6 +217,37 @@
     <div class="row vertical-spacer-medium">
     </div>
     <!-- *******************   END fssTruncate example  ********************** -->
+    <!-- *******************   BEGIN fssDelayedChange example  ********************** -->
+    <hr>
+    <div class="row vertical-spacer-small" >
+      <div class="small-12 columns">
+        <h4>fss-delayed-change directive</h4>
+        <p>
+        fss-delayed-change executes the angular expression after the model stops changing for a certain time period.
+        The delay defaults to 1 second, but it can be changed by setting the "delay" attribute to the amount of milliseconds to wait.
+        </p>
+      </div>
+    </div>
+    <div class="row vertical-spacer-small">
+      <div class="small-12 columns">
+        <ul data-tabset>
+          <li data-tab heading="JavaScript">
+            <span data-sample="example/delayedchangeEx/delayedchangeEx.js" data-language="javascript">
+            </span>
+          </li>
+          <li data-tab heading="HTML">
+            <span data-sample="example/delayedchangeEx/delayedchangeEx.html" data-language="html">
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Includes sample in page so it actually is executed -->
+    <div data-ng-include="'example/delayedchangeEx/delayedchangeEx.html'">
+    </div>
+    <div class="row vertical-spacer-medium">
+    </div>
+    <!-- *******************   END fssDelayedChange example  ********************** -->
     <hr>
   </body>
 </html>

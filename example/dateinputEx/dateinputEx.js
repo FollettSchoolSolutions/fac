@@ -5,7 +5,7 @@
 */
 
 /**
- * Example to show how fssDateShim works.  Sets up initial data to be displayed
+ * Example to show how fssDateInput works.  Sets up initial data to be displayed
  */
 angular.module('dateinputEx', []).controller('DateController', ['$scope', function ($scope) {
   $scope.date1 = new Date();

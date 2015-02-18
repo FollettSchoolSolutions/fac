@@ -1,0 +1,17 @@
+<div data-ng-controller="DelayedChangeCtrl as dcc">
+  <div class="row vertical-spacer-medium">
+  </div>
+  <div class="row">
+    <div class="small-4 small-centered columns">
+      <label>Background color
+        <input type="text" data-ng-model="dcc.textColor" data-ng-change="dcc.ngChangeFn()" data-fss-delayed-change="dcc.fssDelayedChangeFn()" data-delay="500">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-4 small-centered text-center columns" data-ng-style="{'background-color': dcc.ngChangeColor, 'color': 'white'}">ng-change</div>
+  </div>
+  <div class="row">
+    <div class="small-4 small-centered text-center columns" data-ng-style="{'background-color': dcc.fssDelayedChangeColor, 'color': 'white'}">fss-delayed-change</div>
+  </div>
+</div>
