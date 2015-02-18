@@ -28,10 +28,11 @@
     <!-- Application files -->
     <script src="example/sanitizeEx/sanitizeEx.js"></script>
     <script src="example/dateinputEx/dateinputEx.js"></script>
-    <script src="example/delayedchangeEx/delayedchangeEx.js"></script>
     <script src="example/hidekeyboardonsubmitEx/hidekeyboardonsubmitEx.js"></script>
     <script src="example/bargraphEx/bargraphEx.js"></script>
     <script src="example/truncateEx/truncateEx.js"></script>
+    <script src="example/delayedchangeEx/delayedchangeEx.js"></script>
+    <script src="example/highlightonclickEx/highlightonclickEx.js"></script>
     <script src="example/exampleApp.js"></script>
 
   </head>
@@ -248,6 +249,36 @@
     <div class="row vertical-spacer-medium">
     </div>
     <!-- *******************   END fssDelayedChange example  ********************** -->
+    <!-- *******************   BEGIN fssHighlightOnClick example  ********************** -->
+    <hr>
+    <div class="row vertical-spacer-small" >
+      <div class="small-12 columns">
+        <h4>fss-highlight-on-click directive</h4>
+        <p>
+        fss-highlight-on-click selects the input text when the input is clicked. This works on mobile devices as well.
+        </p>
+      </div>
+    </div>
+    <div class="row vertical-spacer-small">
+      <div class="small-12 columns">
+        <ul data-tabset>
+          <li data-tab heading="JavaScript">
+            <span data-sample="example/highlightonclickEx/highlightonclickEx.js" data-language="javascript">
+            </span>
+          </li>
+          <li data-tab heading="HTML">
+            <span data-sample="example/highlightonclickEx/highlightonclickEx.html" data-language="html">
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Includes sample in page so it actually is executed -->
+    <div data-ng-include="'example/highlightonclickEx/highlightonclickEx.html'">
+    </div>
+    <div class="row vertical-spacer-medium">
+    </div>
+    <!-- *******************   END fssHighlightOnClick example  ********************** -->
     <hr>
   </body>
 </html>

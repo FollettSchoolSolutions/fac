@@ -13,7 +13,7 @@
  * Usage:
  * <pre data-sample="/test/example/sanitizeEx/sanitizeEx.js" data-language="javascript"></pre>
  */
-angular.module('showExample', ['sanitizeEx', 'dateinputEx', 'hidekeyboardonsubmitEx', 'bargraphEx', 'truncateEx', 'delayedchangeEx', 'fac', 'mm.foundation']).directive("sample", ['$http', '$timeout', function ($http, $timeout) {
+angular.module('showExample', ['sanitizeEx', 'dateinputEx', 'hidekeyboardonsubmitEx', 'bargraphEx', 'truncateEx', 'delayedchangeEx', 'highlightonclickEx', 'fac', 'mm.foundation']).directive("sample", ['$http', '$timeout', function ($http, $timeout) {
     return {
         restrict: 'A',
         replace: false,
