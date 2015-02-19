@@ -11,6 +11,7 @@
     'fss.directives.loading',
     'fss.directives.sanitize',
     'fss.directives.scrollto',
+    'fss.directives.singlefileselect',
     'fss.filters.truncate',
     'fss.services.analytics',
     'fss.services.datetime',

@@ -34,6 +34,7 @@ module.exports = function(config) {
       'bower_components/modernizr/modernizr.js',
       'bower_components/moment/moment.js',
       'bower_components/angular-momentjs/angular-momentjs.js',
+      'bower_components/ng-file-upload/angular-file-upload-all.js',
       'src/**/*.js',
       'src/**/*.html'
     ],
