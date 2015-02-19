@@ -17,6 +17,8 @@ In your html file:
     ...
     <script src="bower_components/follett-angular-componenets/dist/follett-angular-componenets.js"></script>
 
+Include the `fac` module in your AngularJS application
+
 ######Older versions
 [https://github.com/FollettSchoolSolutions/fac/tree/archive](https://github.com/FollettSchoolSolutions/fac/tree/archive)
 
