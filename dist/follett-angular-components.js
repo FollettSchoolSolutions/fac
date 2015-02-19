@@ -688,21 +688,15 @@
         restrict: 'A',
         template: '<input type="file" ng-file-select="onFileSelect($files)">',
         replace: true,
-        require: ['ngModel', '^?form'],
-        link: function ($scope, elem, attrs, ctrls) {
-          var modelCtrl = ctrls[0];
-          var formCtrl = ctrls[1];
+        require: 'ngModel',
+        link: function ($scope, elem, attrs, ngModel) {
           var modelGetter = $parse(attrs.ngModel);
           var modelSetter = modelGetter.assign;
 
           var customOnFileSelect = attrs.fssSingleFileSelect ? $parse(attrs.fssSingleFileSelect) : angular.noop;
           function updateNgModel($files) {
             modelSetter($scope, $files[0]);
-            modelCtrl.$dirty = true;
-            modelCtrl.$pristine = false;
-            if (formCtrl) {
-              formCtrl.$setDirty();
-            }
+            ngModel.$setDirty();
           }
           $scope.onFileSelect = function ($files) {
             updateNgModel($files);
