@@ -11,9 +11,9 @@ To contribute to the examples:
   * Add a js file named featureEx.js
   * Add an html file named featureEx.html
 * Edit the index.html file and copy the block between "Begin feature example" and "End feature example"
-* Change the dd and li tags to reference the feature name you are adding (i.e., #truncateHtml, #truncateJS, truncateHtmlTab, truncateJSTab, etc)
-* Start the test server to preview your changes by typing 'ant startServer' in the server directory
-* Point a browser to "http://localhost:9000" to verify that the newly added example displays correctly
+* Change the data-sample and ng-include values to reference the feature name you are adding
+* Start the test server to preview your changes by typing `grunt serve`
+* Go to "http://localhost:9000" to verify that the newly added example displays correctly
 
 
 #The MIT License (MIT)

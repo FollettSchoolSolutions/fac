@@ -1,0 +1,23 @@
+<div data-ng-controller="FileSelectCtrl as fsc">
+  <div class="row vertical-spacer-medium">
+  </div>
+  <div class="row">
+    <div class="small-4 columns">
+      <label>File input
+        <input type="file" data-ng-model="fsc.myFile" data-fss-single-file-select="fsc.onFileSelect()" accept="image/*">
+      </label>
+    </div>
+    <div class="small-4 columns end">
+      <strong>Preview</strong>
+      <div data-ng-if="fsc.showPreview()">
+        <img data-ng-src="{{ fsc.imagePreviewSrc }}">
+      </div>
+      <div data-ng-if="fsc.previewIsSupported() && !fsc.showPreview()">
+        Select an image.
+      </div>
+      <div data-ng-if="!fsc.previewIsSupported()">
+        Image preview is not supported for this browser.
+      </div>
+    </div>
+  </div>
+</div>

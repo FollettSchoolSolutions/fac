@@ -34,6 +34,7 @@
     <script src="example/truncateEx/truncateEx.js"></script>
     <script src="example/delayedchangeEx/delayedchangeEx.js"></script>
     <script src="example/highlightonclickEx/highlightonclickEx.js"></script>
+    <script src="example/singlefileselectEx/singlefileselectEx.js"></script>
     <script src="example/exampleApp.js"></script>
 
   </head>
@@ -294,18 +295,50 @@
       <div class="small-12 columns">
         <ul data-tabset>
           <li data-tab heading="HTML">
-            <span data-sample="example/loading/loading.html" data-language="html">
+            <span data-sample="example/loadingEx/loadingEx.html" data-language="html">
             </span>
           </li>
         </ul>
       </div>
     </div>
     <!-- Includes sample in page so it actually is executed -->
-    <div data-ng-include="'example/loading/loading.html'">
+    <div data-ng-include="'example/loadingEx/loadingEx.html'">
     </div>
     <div class="row vertical-spacer-medium">
     </div>
     <!-- *******************   END fssLoading example  ********************** -->
+    <!-- *******************   BEGIN fssSingleFileSelect example  ********************** -->
+    <hr>
+    <div class="row vertical-spacer-small" >
+      <div class="small-12 columns">
+        <h4>fss-single-file-select directive</h4>
+        <p>
+        fss-single-file-select uses <a href="https://github.com/danialfarid/angular-file-upload">angular-file-upload</a> to select a single
+        file and assign the ng-model. It will also take care of updating the pristine and dirty values. It can be passed a function to
+        execute once a file is selected.
+        </p>
+      </div>
+    </div>
+    <div class="row vertical-spacer-small">
+      <div class="small-12 columns">
+        <ul data-tabset>
+          <li data-tab heading="JavaScript">
+            <span data-sample="example/singlefileselectEx/singlefileselectEx.js" data-language="javascript">
+            </span>
+          </li>
+          <li data-tab heading="HTML">
+            <span data-sample="example/singlefileselectEx/singlefileselectEx.html" data-language="html">
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Includes sample in page so it actually is executed -->
+    <div data-ng-include="'example/singlefileselectEx/singlefileselectEx.html'">
+    </div>
+    <div class="row vertical-spacer-medium">
+    </div>
+    <!-- *******************   END fssSingleFileSelect example  ********************** -->
     <hr>
   </body>
 </html>
