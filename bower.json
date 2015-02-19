@@ -1,7 +1,7 @@
 {
   "name": "follett-angular-components",
   "description": "Components helpful to general application development with AngularJS.",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "main": [
     "follett-angular-components.js",
     "follett-angular-components.css"
