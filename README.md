@@ -57,6 +57,7 @@ In your html file:
   * All module names should be in the form '[services|directives|filters|etc].mymodulename'
 * Add the new spec file for your component to a directory named 'test' as a subfolder of the above directory
   * Look at the existing components for an example of this if you are unsure where this goes
+* Add your module to main.js
 * Test and lint it by typing `grunt` in the project root directory
 * Debug the test suite in a Chrome browser by typing `grunt debug`
 * Build it by typing `grunt build`. This will create a 'dist' folder with the following files:
