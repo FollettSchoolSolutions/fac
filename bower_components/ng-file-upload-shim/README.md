@@ -1,6 +1,7 @@
-# angular-file-upload-bower
+angular-file-upload-shim-bower
+==============================
 
-bower distribution of [angular-file-upload](https://github.com/danialfarid/angular-file-upload).
+bower distribution of [angular-file-upload](https://github.com/danialfarid/angular-file-upload) shim file.
 All issues and pull request must be sumbitted to [angular-file-upload](https://github.com/danialfarid/angular-file-upload)
 
 ## Install
@@ -8,7 +9,7 @@ All issues and pull request must be sumbitted to [angular-file-upload](https://g
 Install with `bower`:
 
 ```shell
-bower install ng-file-upload
+bower install ng-file-upload-shim
 ```
 
 Add a `<script>` to your `index.html`:

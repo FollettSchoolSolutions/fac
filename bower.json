@@ -14,7 +14,7 @@
   "dependencies": {
     "angular-foundation": "~0.5.1",
     "foundation": "~5.5.1",
-    "follett-angular-components": "~1.3.4"
+    "follett-angular-components": "~1.3.5"
   },
   "devDependencies": {}
 }
