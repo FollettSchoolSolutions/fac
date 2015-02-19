@@ -5,7 +5,7 @@
 */
 
 /**
- * Example to show how fssDateInput works.  Sets up initial data to be displayed
+ * Example to show how fssSingleFileSelect works.  Sets up initial data to be displayed
  */
 angular.module('singlefileselectEx', []).controller('FileSelectCtrl', ['$scope', '$window', function ($scope, $window) {
   var fileSelectCtrl = this;
